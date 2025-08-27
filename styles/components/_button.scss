@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+@use "sass:color";
+
+
+.button {
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 44px;
+    background-color: $button-color-primary;
+    border: none;
+
+    &::after{
+        content: '✓';
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.adjust($button-color-primary, $lightness: -20%);
+    }
+}

@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos</title>
+
+    <link rel="stylesheet" href="./dist/main.css" type="text/css"/>
 </head>
 <body>
+    <header class="header">
+        <div class="header__container">
+            <nav class="navigation">
+                <ul>
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-item-link" href="#">Todo</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-item-link" href="#">About Us</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-item-link" href="#">Light/Night Mode</a>
+                    </li>
+                    <li class="navigation__list-item">
+                        <a class="navigation__list-item-link" href="#">Sidebar</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home__container">
+            <div class="home__container-todo-status">
+                <div>
+                    <h1>Todo Done</h1>
+                    <p>keep it up</p>
+                </div>
+                <div>
+                    <p>1/3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="home__container-todo-row">
+            <div class="home__container-todo-column">
+
+                <div class="home__container-todo-controls">
+                    <input class="home__container-todo-input" type="text" placeholder="write your next task">
+                    <button class="button" for=""></button>
+                </div>
+                
+                <div class="home__container-todo-scroll">
+                    <div class="home__container-todo-list">
+                        <p>select</p>
+                        <p>Todo 1</p>
+                        <p>Edit</p>
+                        <p>del</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home__container-todo-column">
+                <div class="home__container-todo-search">
+                    <input class="home__container-todo-input" type="text" placeholder="search after your task">
+                </div>
+                <div class="home__container-todo-search-results">result</div>
+            </div>
+        </div>
+    </section>
     
+
+    
+
+    <footer class=""></footer>
 </body>
 </html>

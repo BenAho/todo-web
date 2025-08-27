@@ -1,3 +1,13 @@
+@use 'sass:color';
+
+$background-color-fifth: rgb(0, 11, 11)!default;
+$background-color-fifth-opacity: rgba(0, 11, 11, 0.6)!default;
+
+$field-background-color-primary: rgba(30, 30, 30, 1)!default;
+
+$border-color-primary: rgba(140, 140, 140, 1)!default;
+
+$button-color-primary: rgba(235, 97, 63, 1)!default;
 
 /** 1200px oder schmaler */
 $breakpoint-lg: 75em!default;
@@ -15,8 +25,8 @@ $breakpoint-xs: 36em!default;
 $breakpoint-xxs: 25em!default;
 
 /** Breakpoints */
-@media (max-width: $breakpoint-lg) {}
-@media (max-width: $breakpoint-md) {}
-@media (max-width: $breakpoint-sm) {}
-@media (max-width: $breakpoint-xs) {}
-@media (max-width: $breakpoint-xxs) {}
+@media (min-width: $breakpoint-lg) {}
+@media (min-width: $breakpoint-md) {}
+@media (min-width: $breakpoint-sm) {}
+@media (min-width: $breakpoint-xs) {}
+@media (min-width: $breakpoint-xxs) {}
