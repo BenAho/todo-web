@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.progress {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 99999px;
+    background-color: $button-color-primary;
+    
+    overflow: hidden;
+    position: relative;
+}
+
+.progress__status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 2rem;
+}

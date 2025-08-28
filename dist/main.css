@@ -81,6 +81,24 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.progress {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 99999px;
+  background-color: rgb(235, 97, 63);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress__status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+}
+
 .header {
   position: sticky;
   z-index: 1000;
@@ -150,13 +168,17 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
 }
 
-.home__container-todo-column {
+.home__container-todo-right, .home__container-todo-left {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(0, 11, 11);
   border: 1px solid rgb(140, 140, 140);
   border-radius: 8px;
   height: auto;
+  min-height: 8rem;
   width: 50%;
   margin: 0 1rem 1rem 1rem;
 }
@@ -166,38 +188,46 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
   padding: 1rem 0 1rem 0rem;
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 13, 13, 0.08); /* halbtransparent nötig */
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   will-change: backdrop-filter;
   width: 100%;
   z-index: 500;
 }
 
+.home__container-todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .home__container-todo-scroll {
   width: 100%;
   max-height: 25rem;
-  overflow: auto;
-  justify-content: center;
-  align-items: center;
+  overflow-y: auto;
+  padding-top: 4rem;
 }
 
 .home__container-todo-list {
   display: flex;
   flex-direction: row;
   gap: 0.625rem;
-  width: 70%;
+  width: 85%;
   border: 1px solid rgb(140, 140, 140);
   background-color: rgb(30, 30, 30);
   border-radius: 8px;
   padding: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 0.5rem auto 0.5rem auto;
+  position: relative;
 }
 
 .home__container-todo-search {
@@ -210,12 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 13, 13, 0.08); /* halbtransparent nötig */
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  will-change: backdrop-filter;
   width: 100%;
-  z-index: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
