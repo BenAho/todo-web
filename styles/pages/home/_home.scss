@@ -97,13 +97,17 @@
     display: flex;
     flex-direction: row;
     gap: 0.625rem;
-    width: 85%;
+    width: 95%;
+    max-height: 15rem;
     border: 1px solid $border-color-primary;
     background-color: $background-color-secondary;
     border-radius: 8px;
     padding: 1rem;
     margin: 0.5rem auto 0.5rem auto;
-    
+
+    scrollbar-width: thin;
+    scrollbar-color: $border-color-primary transparent;
+
     position: relative;
 }
 
@@ -120,4 +124,26 @@
     right: 0;
 
     width: 100%;
+}
+
+.todo-list-text {
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $border-color-primary transparent;
+
+    width: 65%;
+    font-size: clamp(0.725rem, 0.45rem + 1vw, 0.625rem);
+    // font-size: clamp(0.625rem, 0.25rem + 1vw, 1rem);
+    padding: 0 0.3rem;
+    border-bottom: 1px solid $border-color-primary;
+
+    &:hover {
+        background-color: rgba(119, 199, 93, 0.1);
+    }
 }

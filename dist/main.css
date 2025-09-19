@@ -45,6 +45,24 @@ h1, h2, h3, h4, h5, h6 {
   fill: currentColor;
 }
 
+.icon-edit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+  width: 2rem;
+}
+
+.icon-del {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+  width: 2rem;
+}
+
 .button {
   appearance: none;
   height: 2rem;
@@ -62,6 +80,80 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5rem;
 }
 .button:hover {
+  cursor: pointer;
+  background-color: rgb(177.5094339623, 49.9245283019, 18.4905660377);
+}
+
+.checkbox-done {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999999rem;
+  background-color: transparent;
+  border-color: rgb(235, 97, 63);
+  border-width: 1px;
+  border-style: solid;
+  align-self: center;
+  flex: 0 0 auto;
+}
+.checkbox-done:hover {
+  cursor: pointer;
+}
+.checkbox-done:checked {
+  background-color: rgb(119, 199, 93);
+  border-color: rgb(119, 199, 93);
+}
+
+.button-edit {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  align-self: center;
+  background-color: rgb(235, 97, 63);
+  border: none;
+  border-radius: 44px;
+  color: black;
+  cursor: pointer;
+}
+.button-edit svg {
+  display: block;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+  pointer-events: none;
+}
+.button-edit:hover {
+  cursor: pointer;
+  background-color: rgb(177.5094339623, 49.9245283019, 18.4905660377);
+}
+
+.button-del {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  align-self: center;
+  background-color: rgb(235, 97, 63);
+  border: none;
+  border-radius: 44px;
+  color: black;
+  cursor: pointer;
+}
+.button-del svg {
+  display: block;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+  pointer-events: none;
+}
+.button-del:hover {
   cursor: pointer;
   background-color: rgb(177.5094339623, 49.9245283019, 18.4905660377);
 }
@@ -221,12 +313,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   gap: 0.625rem;
-  width: 85%;
+  width: 95%;
+  max-height: 15rem;
   border: 1px solid rgb(140, 140, 140);
   background-color: rgb(30, 30, 30);
   border-radius: 8px;
   padding: 1rem;
   margin: 0.5rem auto 0.5rem auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(140, 140, 140) transparent;
   position: relative;
 }
 
@@ -241,6 +336,24 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   width: 100%;
+}
+
+.todo-list-text {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(140, 140, 140) transparent;
+  width: 65%;
+  font-size: clamp(0.725rem, 0.45rem + 1vw, 0.625rem);
+  padding: 0 0.3rem;
+  border-bottom: 1px solid rgb(140, 140, 140);
+}
+.todo-list-text:hover {
+  background-color: rgba(119, 199, 93, 0.1);
 }
 
 /*# sourceMappingURL=main.css.map */
