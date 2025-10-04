@@ -37,8 +37,9 @@
                     <p>keep it up</p>
                 </div>
                 <div class="progress">
-                    <div class="progress__status">2/3</div>
-                    <!-- <div class="progress__overall"></div> -->
+                    <div class="progress__status">
+                        <span class="progress__status-current">2</span>/<span class="progress__status-total">3</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,17 +48,27 @@
             <div class="home__container-todo-left">
 
                 <div class="home__container-todo-controls">
-                    <input class="home__container-todo-input" type="text" placeholder="write your next task">
-                    <button class="button" for=""></button>
+                    <input id="add-todo-input" class="home__container-todo-input" type="text" placeholder="write your next task">
+                    <button id="add-todo-button" class="button"></button>
                 </div>
                 <div class="home__container-todo">
-                    <div class="home__container-todo-scroll">
-                        <div class="home__container-todo-list">
-                            <p>select</p>
-                            <p>Todo 1</p>
-                            <p>Edit</p>
-                            <p>del</p>
-                        </div>
+                    <div id="add-todo-result" class="home__container-todo-scroll">
+                        <template id="todo-item-template">
+                            <div  class="home__container-todo-list">
+                                <input type="checkbox" class="checkbox-done"></input>
+                                <div class="todo-list-text"></div>
+                                <button type="button" class="button-edit">
+                                    <svg class="icon-edit">
+                                        <use href="images/icons.svg#icon-edit" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="button-del">
+                                    <svg class="icon-del">
+                                        <use href="images/icons.svg#icon-del" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -74,5 +85,7 @@
     </section>
     <footer class="">
     </footer>
+
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>

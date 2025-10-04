@@ -24,3 +24,91 @@
         background-color: color.adjust($button-color-primary, $lightness: -20%);
     }
 }
+
+.checkbox-done {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999999rem;
+    background-color: transparent;
+    border-color: $button-color-primary;
+    border-width: 1px;
+    border-style: solid;
+
+    align-self: center;
+
+    flex: 0 0 auto;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:checked {
+        background-color: rgba(119, 199, 93, 1);
+        border-color: rgba(119, 199, 93, 1);
+    }
+}
+
+.button-edit {
+    position: relative;
+
+    height: 3rem;
+    width: 3rem;
+
+    align-self: center;
+
+    background-color: $button-color-primary;
+    border: none;
+    border-radius: 44px;
+    color: black;
+    cursor: pointer;
+    
+    svg {
+        display: block;
+        width: 70%;
+        height: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: currentColor;
+        pointer-events: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.adjust($button-color-primary, $lightness: -20%);
+    }
+}
+
+.button-del {
+    position: relative;
+
+    height: 3rem;
+    width: 3rem;
+
+    align-self: center;
+
+    background-color: $button-color-primary;
+    border: none;
+    border-radius: 44px;
+    color: black;
+    cursor: pointer;
+    
+    svg {
+        display: block;
+        width: 70%;
+        height: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: currentColor;
+        pointer-events: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.adjust($button-color-primary, $lightness: -20%);
+    }
+}
